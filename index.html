@@ -11,7 +11,52 @@
   </head>
   <body>
     <div class="container">
-
+      <div class="row">
+        <div class="col">
+        <form id="new-contact">
+          <div class="row">
+            <div class="col">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">First Name:</span>
+                </div>
+                <input type="text" id="new-first-name">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Last Name:</span>
+                </div>
+                <input type="text" id="new-last-name">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Phone Number:</span>
+                </div>
+                <input type="text" id="new-phone-number">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button type="submit" class="btn btn-info">Add Contact</button>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2>Contacts:</h2>
+          <ul id="contacts"></ul>
+        </div>
+      </div>
+      <div id="show-contact" class="row">
+        <div class="col">
+          <p>First Name: <span class="first-name"></span></p>
+          <p>Last Name: <span class="last-name"></span></p>
+          <p>Phone Number: <span class="phone-number"></span></p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

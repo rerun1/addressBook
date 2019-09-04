@@ -1,3 +1,13 @@
+// var mom = new Contact {firstName: "Carol", lastName: "McClelland", phoneNumber: "503-319-2912"};
+// var patsy = new Contact {firstName: "Patsy", lastName: "Aplin", phoneNumber: "503-936-1059"};
+// var margaret = new Contact {firstName: "Margaret", lastName: "Long", phoneNumber: "206-819-8057"};
+// var mike = new Contact {firstName: "Mike", lastName: "McClelland", phoneNumber: "541-929-6731"};
+// var ron = new Contact {firstName: "Ron", lastName: "Rubino", phoneNumber: "503-329-4783"};
+// var jessica =  {firstName: "Jessica", lastName: "Poonpirom", phoneNumber: "503-989-7228"};
+// var julia = new Contact {firstName: "Julia", lastName: "Rubino", phoneNumber: "503-679-7716"};
+
+
+
 //Business Logic for AddressBook
 function AddressBook(){
   this.contacts = [];
@@ -22,17 +32,17 @@ AddressBook.prototype.findContact = function(id) {
   };
   return false;
 }
-AddressBook.prototype.updateContactPhone = function(id, string) {
-  for (var i=0; i < this.contacts.length; i++) {
-    if (this.contacts[i]) {
-      if (this.contacts[i].id == id) {
-        this.contacts[i].phoneNumber = string;
-        return this.contacts[i].phoneNumber;
-      }
-    }
-  };
-  return false;
-}
+// AddressBook.prototype.updateContactPhone = function(id, string) {
+//   for (var i=0; i < this.contacts.length; i++) {
+//     if (this.contacts[i]) {
+//       if (this.contacts[i].id == id) {
+//         this.contacts[i].phoneNumber = string;
+//         return this.contacts[i].phoneNumber;
+//       }
+//     }
+//   };
+//   return false;
+// }
 AddressBook.prototype.deleteContact = function(id) {
   for (var i=0; i < this.contacts.length; i++) {
     if (this.contacts[i]) {
@@ -45,14 +55,6 @@ AddressBook.prototype.deleteContact = function(id) {
   return false;
 }
 
-
-AddressBook.prototype.findContact = function(id) {
-  for (var i = 0; i < this.contacts.length; i++) {
-    if (this.contacts[i].id == id) {
-      return this.contacts[i];
-    }
-  }
-}
 //Business Logic for Contacts
 function Contact (firstName, lastName, phoneNumber) {
   this.firstName = firstName;
@@ -62,6 +64,33 @@ function Contact (firstName, lastName, phoneNumber) {
 Contact.prototype.fullName = function(){
   return this.firstName + " " + this.lastName;
 }
+
+var resetForm = function(){
+  $("input#new-first-name").val("");
+  $("input#new-last-name").val("");
+  $("input#new-phone-number").val("");
+}
+
+// User Logic
+var addressBook = new AddressBook();
+
+$(document).ready(function(){
+  $("form#new-contact").submit(function(event){
+    var inputtedFirstName = $("input#new-first-name").val();
+    var inputtedLastName = $("input#new-last-name").val();
+    var inputtedPhoneNumber = $("input#new-phone-number").val();
+    var newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
+    addressBook.addContact(newContact);
+    console.log(addressBook.contacts);
+    resetForm();
+    event.preventDefault();
+  });
+});
+
+
+
+
+
 
 //
 // var tomatoes = {name: "Tomatoes", price: 2.99};
