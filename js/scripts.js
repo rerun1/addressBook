@@ -74,6 +74,16 @@ var resetForm = function(){
 // User Logic
 var addressBook = new AddressBook();
 
+function displayContactDetails(addressBookToDisplay){
+  var contactsList = $("ul#contacts");
+  var htmlForContactInfo = "";
+  addressBookToDisplay.contacts.forEach(function(contact){
+    htmlForContactInfo += "<li id="+contact.id+">"+contact.firstName+" "+contact.lastName+"</li>";
+  });
+  contactsList.html(htmlForContactInfo);
+};
+
+
 $(document).ready(function(){
   $("form#new-contact").submit(function(event){
     var inputtedFirstName = $("input#new-first-name").val();
@@ -82,6 +92,7 @@ $(document).ready(function(){
     var newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
     addressBook.addContact(newContact);
     console.log(addressBook.contacts);
+    displayContactDetails(addressBook);
     resetForm();
     event.preventDefault();
   });
