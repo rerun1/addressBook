@@ -80,15 +80,18 @@ function showContact(contactId) {
   buttons.empty();
   buttons.append("<button class='deleteButton' id=" +  + contact.id + ">Delete</button>");
 }
+function deleteThisContact(contactId) {
+  addressBook.deleteContact(contactId);
+  $("#show-contact").hide();
+  displayContactDetails(addressBook);
+}
 
 function attachContactListeners() {
   $("ul#contacts").on("click", "li", function() {
     showContact(this.id);
   });
   $("#buttons").on("click", ".deleteButton", function() {
-    addressBook.deleteContact(this.id);
-    $("#show-contact").hide();
-    displayContactDetails(addressBook);
+    deleteThisContact(this.id);
   });
 };
 var resetForm = function(){
@@ -107,7 +110,7 @@ $(document).ready(function(){
     var newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
 
     addressBook.addContact(newContact);
-    
+
     displayContactDetails(addressBook);
 
     resetForm();
