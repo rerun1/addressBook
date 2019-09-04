@@ -82,9 +82,14 @@ function displayContactDetails(addressBookToDisplay){
   });
   contactsList.html(htmlForContactInfo);
 };
-
+function attachContactListener(){
+  $("ul#contacts").on("click", "li", function(){
+    console.log("the id of this <li> is "+this.id+".");
+  });
+};
 
 $(document).ready(function(){
+  attachContactListener();
   $("form#new-contact").submit(function(event){
     var inputtedFirstName = $("input#new-first-name").val();
     var inputtedLastName = $("input#new-last-name").val();
