@@ -13,9 +13,16 @@
     <div class="container">
       <div class="row">
         <div class="col">
+          <h1>Address Book</h1>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
         <form id="new-contact">
-          <div class="row">
+          <div class="row  noMarginTop">
             <div class="col">
+              <h2>Add a Contact:</h2>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text">First Name:</span>
@@ -30,9 +37,33 @@
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Phone Number:</span>
+                  <span class="input-group-text">Cell:</span>
                 </div>
                 <input type="text" id="new-phone-number">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Email:</span>
+                </div>
+                <input type="text" id="new-email">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Address:</span>
+                </div>
+                <input type="text" id="new-address">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">City:</span>
+                </div>
+                <input type="text" id="new-city">
+              </div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">State:</span>
+                </div>
+                <input type="text" id="new-state">
               </div>
             </div>
           </div>
@@ -47,6 +78,7 @@
       <div class="row">
         <div class="col">
           <h2>Contacts:</h2>
+          <p id="userInstructions">Click on Contact to Show Details</p>
           <ul id="contacts"></ul>
         </div>
       </div>
@@ -54,9 +86,13 @@
         <div class="col">
           <p>First Name: <span class="first-name"></span></p>
           <p>Last Name: <span class="last-name"></span></p>
-          <p>Phone Number: <span class="phone-number"></span></p>
+          <p>Cell: <span class="phone-number"></span></p>
+          <p>Email: <span class="email"></span></p>
+          <p>Address: <br>
+          <span class="address"></span><br>
+          <span class="city"></span>, <span class="state"></span></p>
         </div>
-        <div class="col">
+        <div class="col bigMarginBottom">
           <div id="buttons">
 
           </div>
