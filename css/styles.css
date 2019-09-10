@@ -1,25 +1,3 @@
-.row {
-  margin-top:2em;
-}
-.noMarginTop {
-  margin-top:0;
-}
-.bigMarginBottom {
-  margin-bottom:15em;
-}
-h2 {
-  margin-bottom:.5em;
-}
 #show-contact {
   display: none;
-}
-ul {
-  margin-left:1em;
-  padding-left:0;
-}
-#userInstructions {
-  display: none;
-}
-.deleteButton {
-  background-color: #ffc107;/* bootstrap warning color */
 }
