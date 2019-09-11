@@ -109,9 +109,15 @@ function resetForm(){
   $("input#new-first-name").val("");
   $("input#new-last-name").val("");
   $("input#new-phone-number").val("");
+  $("input#new-street").val("");
+  $("input#new-city").val("");
+  $("input#new-state").val("");
 };
 $(document).ready(function(){
   attachContactListeners();
+  $("#add-address").click(function() {
+    appendAddress();
+  });
 
   $("form#new-contact").submit(function(event){
     event.preventDefault();
@@ -132,9 +138,10 @@ $(document).ready(function(){
 
     displayContactDetails(addressBook);
 
-    $("#add-address").click(function() {
-      appendAddress();
-    });
+    resetForm();
+
+    $("div#addAddressForm").empty();
 
   });
+
 });
