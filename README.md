@@ -4,14 +4,15 @@
 <br>
 
 ## Description
-Web with program that builds a Address Book from user input and displays the first and last name, with more information displayed on click.
+Web with program that builds an Address Book from user input and displays the first and last name, with more information displayed on click.
 
 Add functionality to record and display a contact's email address.
 Add functionality to record and display a contact's physical address.
-Then, add functionality that allows a user to record multiple addresses (email or physical) for a single Contact, and what type each address is (ie: "work", "personal", etc.) (Hint: Address will need to be an object with multiple properties saved within the Contact object.)
-Remove any additional address fields when the form is submitted. (One way to do this would be to use the not() and remove() functions.)
-If you wish, work on these too:
+Then, add functionality that allows a user to record multiple addresses (email or physical) for a single Contact. Address and Email are separate objects pushed into the contact object.
+Program removes additional address and email fields when the form is submitted.
 
+TO DO:
+Describe the type of additional email or address ("work", "personal").
 Refactor some of the other sections of the jQuery into functions as we did with resetFields()
 Try a jQuery method from either the CSS or Effects options in the documentation (e.g. fadeIn() or css())
 Try a jQuery method from the Events options (e.g. hover() or keypress())
@@ -21,13 +22,13 @@ Add support for multiple AddressBooks, each with their own unique set of Contact
 <br>
 
 ## Objectives
-- [] JavaScript business logic and user interface logic are separate.
-- [] Variable names are descriptive and use lower camel case (e.g. myVariableExample).
-- [] Code is clean, well-refactored, and easy-to-read. This includes correct indendation, spacing, and including only necessary comments and debugging tools.
-- [] Application implements a for loop and works as expected.
+- [x] JavaScript business logic and user interface logic are separate.
+- [x] Variable names are descriptive and use lower camel case (e.g. myVariableExample).
+- [x] Code is clean, well-refactored, and easy-to-read. This includes correct indendation, spacing, and including only necessary comments and debugging tools.
+- [x] Application implements a for loop and works as expected.
 All previous objectives have been met.
-- [] Project is broken down into "plain English" specs, listed in README.
-- [] Project is in a presentable, portfolio-quality state.
+- [x] Project is broken down into "plain English" specs, listed in README.
+- [x] Project is in a presentable, portfolio-quality state.
 - [] Practice styling with imagery
 
 <br>

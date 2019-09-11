@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/scripts.js" type="text/javascript"></script>
+<script src="js/scripts.js"></script>
     <title>Address Book</title>
   </head>
   <body>
@@ -47,8 +47,18 @@
             <div id="addAddressForm">
 
             </div>
+            <div class="addEmail">
+              <div class="form-group">
+                <label for="new-email">Email</label>
+                <input type="text" class="form-control" id="new-email">
+              </div>
+            </div>
+            <div id="addEmailForm">
+
+            </div>
             <button type="submit" class="btn btn-primary">Create Contact</button>
             <span class="btn btn-success" id="add-address">Add another Address</span>
+            <span class="btn btn-warning mt-3" id="add-email">Add another Email</span>
           </form>
           <hr>
           <h2>Contacts:</h2>
@@ -63,7 +73,9 @@
             <ul id="addressListOutput">
 
             </ul>
+            <ul id="emailListOutput">
 
+            </ul>
             <div id="buttons">
             </div>
           </div>
